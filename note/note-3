@@ -13,7 +13,7 @@ DataSet and DataStream
 
 Flink编程模型
 	1）获取执行环境
-	2）获取数据
+	2）获取数据(文本，kafka，或者其他)
 	3）transformation
 	4）sink
 	5）触发执行
