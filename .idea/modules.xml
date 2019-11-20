@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/flink-train.iml" filepath="$PROJECT_DIR$/.idea/flink-train.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flink-train-java/flink-train-java.iml" filepath="$PROJECT_DIR$/flink-train-java/flink-train-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/imooc-flink-train/imooc-flink-train.iml" filepath="$PROJECT_DIR$/imooc-flink-train/imooc-flink-train.iml" />
+    </modules>
+  </component>
+</project>

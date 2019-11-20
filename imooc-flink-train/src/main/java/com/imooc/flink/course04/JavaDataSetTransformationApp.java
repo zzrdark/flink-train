@@ -24,13 +24,13 @@ public class JavaDataSetTransformationApp {
 //        mapPartitionFunction(env);
 
 //        firstFunction(env);
-//        flatMapFunction(env);
+ //       flatMapFunction(env);
 
 //        distinctFunction(env);
-//        joinFunction(env);
-//        outerJoinFunction(env);
+//       joinFunction(env);
+        outerJoinFunction(env);
 
-        crossFunction(env);
+//        crossFunction(env);
     }
 
     public static void crossFunction(ExecutionEnvironment env) throws Exception {
@@ -182,10 +182,10 @@ public class JavaDataSetTransformationApp {
 
         DataSource<Tuple2<Integer, String>> data = env.fromCollection(info);
 
-        data.first(3).print();
+        data.first(2).print();
         System.out.println("~~~~~~~~~~");
 
-        data.groupBy(0).first(2).print();
+        data.groupBy(0).first(1).print();
         System.out.println("~~~~~~~~~~");
 
         data.groupBy(0).sortGroup(1, Order.DESCENDING).first(2).print();
@@ -200,22 +200,22 @@ public class JavaDataSetTransformationApp {
         }
         DataSource<String> data = env.fromCollection(list).setParallelism(6);
 
-//        data.map(new MapFunction<String, String>() {
-//            public String map(String input) throws Exception {
-//                String connection = DBUtils.getConection();
-//                System.out.println("connection = [" + connection + "]");
-//                DBUtils.returnConnection(connection);
-//                return input;
-//            }
-//        }).print();
+/*        data.map(new MapFunction<String, String>() {
+            public String map(String input) throws Exception {
+                String connection = DBUtils.getConection();
+                System.out.println("connection = [" + connection + "]");
+                DBUtils.returnConnection(connection);
+                return input;
+            }
+        }).print();*/
 
-        data.mapPartition(new MapPartitionFunction<String, String>() {
+        /*data.mapPartition(new MapPartitionFunction<String, String>() {
             public void mapPartition(Iterable<String> inputs, Collector<String> collector) throws Exception {
                 String connection = DBUtils.getConection();
                 System.out.println("connection = [" + connection + "]");
                 DBUtils.returnConnection(connection);
             }
-        }).print();
+        }).print();*/
 
     }
 

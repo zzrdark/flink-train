@@ -38,6 +38,7 @@ public class JavaDistributedCacheApp {
                 }
             }
 
+            @Override
             public String map(String value) throws Exception {
                 return value;
             }

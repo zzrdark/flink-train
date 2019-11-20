@@ -21,15 +21,19 @@ public class JavaCounterApp {
 
         DataSet<String> info = data.map(new RichMapFunction<String, String>() {
 
+
+            //step1:定义计数器
             LongCounter counter = new LongCounter();
 
             @Override
             public void open(Configuration parameters) throws Exception {
                 super.open(parameters);
 
+                //step2:注册计数器
                 getRuntimeContext().addAccumulator("ele-counts-java", counter);
             }
 
+            @Override
             public String map(String value) throws Exception {
                 counter.add(1);
                 return value;

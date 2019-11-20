@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.imooc.flink</groupId>
-    <artifactId>flink-train</artifactId>
+    <artifactId>imooc-flink-train</artifactId>
     <version>1.0</version>
     <name>${project.artifactId}</name>
     <description>My wonderfull scala app</description>
@@ -24,11 +24,11 @@
     </properties>
 
     <dependencies>
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-scala_${scala.binary.version}</artifactId>
             <version>${flink.version}</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.apache.flink</groupId>
@@ -42,11 +42,11 @@
             <version>${flink.version}</version>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -93,7 +93,7 @@
 
     </dependencies>
 
-    <build>
+    <!--<build>
         <sourceDirectory>src/main/scala</sourceDirectory>
         <testSourceDirectory>src/test/scala</testSourceDirectory>
         <plugins>
@@ -123,8 +123,8 @@
                 <configuration>
                     <useFile>false</useFile>
                     <disableXmlReport>true</disableXmlReport>
-                    <!-- If you have classpath issue like NoDefClassError,... -->
-                    <!-- useManifestOnlyJar>false</useManifestOnlyJar -->
+                    &lt;!&ndash; If you have classpath issue like NoDefClassError,... &ndash;&gt;
+                    &lt;!&ndash; useManifestOnlyJar>false</useManifestOnlyJar &ndash;&gt;
                     <includes>
                         <include>**/*Test.*</include>
                         <include>**/*Suite.*</include>
@@ -132,5 +132,5 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build>-->
 </project>
